@@ -39,7 +39,7 @@ Route::middleware('auth:api-admin')->group(function(){
     Route::get('userdetails/{id}', [UserController::class, 'userdetails']);
     Route::get('useredit/{id}', [UserController::class, 'useredit']);
     Route::put('userupdate/{id}', [UserController::class, 'userupdate']);
-    Route::delete('userdelete', [UserController::class, 'userdelete']);
+    Route::delete('userdelete/{id}', [UserController::class, 'userdelete']);
 });
 
 Route::middleware('auth:api-user')->group(function(){

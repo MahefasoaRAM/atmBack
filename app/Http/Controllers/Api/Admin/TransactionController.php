@@ -21,7 +21,7 @@ class TransactionController extends Controller
         if($transaction){
             return response()->json([
                 'status' => 200,
-                'transaction' => $transaction,
+                'transactiondetails' => $transaction,
             ]);
         }
     }

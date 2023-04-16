@@ -58,7 +58,7 @@ class UserController extends Controller
     }
 
     public function userdetails($id){
-        $user = User::with('transactions')->find($id);
+        $user = User::find($id);
         if($user){
             return response()->json([
                 'status' => 200,
