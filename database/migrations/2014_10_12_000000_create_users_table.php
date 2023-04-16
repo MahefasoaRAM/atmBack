@@ -17,8 +17,12 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phone');
+            $table->string('account')->unique();
+            $table->string('pin');
+            $table->double('balance', 10, 2);
+            $table->string('api_token')->default('$2y$10$xFsYHCx7EEVEaNoAMNa4T.57AhWQmjaovWvNkEhZJiI6gQNhLAmfu');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
